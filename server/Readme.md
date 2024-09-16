@@ -148,4 +148,4 @@ Docker Compose is used to orchestrate the database and application containers.
 
 - **`npm run migration`**: Applies database migrations.
 - **`npm run seed`**: Populates the database with initial data.
-- **`npm run dev`**: Starts the development server. 
+- **`npm run dev`**: Starts the development server.

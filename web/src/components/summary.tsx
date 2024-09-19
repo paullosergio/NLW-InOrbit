@@ -77,10 +77,10 @@ export function Summary() {
 								</h3>
 
 								<ul className="flex flex-col gap-3">
-									{goals.map(goal => {
+									{goals.map((goal, index) => {
 										const time = dayjs(goal.completedAt).format('HH:mm')
 										return (
-											<li key={goal.id} className="flex items-center gap-2">
+											<li key={`${goal.id}-${index}`} className="flex items-center gap-2">
 												<CheckCircle2 className="size-4 text-pink-500" />
 												<span className="text-sm text-zinc-400">
 													Você completou "

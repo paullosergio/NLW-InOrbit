@@ -24,6 +24,16 @@ services:
     volumes:
       - .:/app
     entrypoint: ["sh", "-c", "chmod +x /app/scripts/init.sh && /app/scripts/init.sh"]
+  
+  web:
+    build: 
+      context: ../web/.
+    depends_on:
+      - app
+    ports:
+      - "5173:5173"
+    volumes:
+      - ../web:/app
 
 volumes:
   dbdata:
